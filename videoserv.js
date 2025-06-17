@@ -41,8 +41,8 @@ const checkuser=({targetid})=>{
 
 }   
 
-const calluser=({to,offer})=>{
-    io.to(online.get(to)).emit("receivecall",{from:socket.id,offer});
+const calluser=({to,offer,from})=>{
+    io.to(online.get(to)).emit("receivecall",{from:from,offer});
     console.log("the offer is",offer);
     
 }

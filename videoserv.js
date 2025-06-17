@@ -25,7 +25,7 @@ const conreg=(socket)=>{
              
 
 
-    }
+    };
 
 
 

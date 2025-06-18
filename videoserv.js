@@ -76,6 +76,15 @@ const dis= () => {
   }
 }
 
+const rej=({to,code})=>{
+if(code==='1'){
+  io.to(online.get(to)).emit("rejectcall",{code});
+    return;
+}
+
+    
+}
+
 
     socket.on('register',reg);
     socket.on('targetcheck',checkuser);
@@ -83,6 +92,7 @@ const dis= () => {
     socket.on('answer-call',ans);
     socket.on('ice-candidate',candidate);
     socket.on('disconnect',dis);
+    socket.on("rejectcall",rej);
 
 
 

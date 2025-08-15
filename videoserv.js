@@ -6,12 +6,7 @@ const online=new Map();
 const app=express();
 const server=http.createServer(app);
 const port=process.env.PORT||8080;
-const cor={
-    cors:{
-        origin:https://twin-video.onrender.com,
-        methods:['GET','POST']
-    }
-};
+app.use(cors());
 const io=new Server(server,cor);
 const conreg=(socket)=>{
     console.log('user connected having socket id',socket.id);

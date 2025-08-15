@@ -8,7 +8,7 @@ const server=http.createServer(app);
 const port=process.env.PORT||8080;
 const cor={
     cors:{
-        origin:"https://vidfront-2.onrender.com",
+        origin:https://twin-video.onrender.com,
         methods:['GET','POST']
     }
 };

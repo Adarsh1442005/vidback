@@ -7,7 +7,13 @@ const app=express();
 const server=http.createServer(app);
 const port=process.env.PORT||8080;
 app.use(cors());
-const io=new Server(server,cor);
+const io = new Server(server, {
+  cors: {
+    origin: "*", // or specify your frontend URL
+    methods: ["GET", "POST"]
+  }
+});
+
 const conreg=(socket)=>{
     console.log('user connected having socket id',socket.id);
     const reg=({userid})=>{
